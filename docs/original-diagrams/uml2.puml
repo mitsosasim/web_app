@@ -1,0 +1,278 @@
+@startuml
+annotation java.lang.Override
+annotation javax.servlet.annotation.WebServlet
+class com.fasterxml.jackson.databind.JsonNode
+class com.fasterxml.jackson.databind.ObjectMapper
+class com.google.gson.JsonObject
+class com.google.gson.JsonParser
+class database.init.InitDatabase
+class database.tables.EditBookingsTable
+class database.tables.EditMessagesTable
+class database.tables.EditPetKeepersTable
+class database.tables.EditPetOwnersTable
+class database.tables.EditPetsTable
+class java.io.IOException
+class java.io.PrintWriter
+class java.net.HttpURLConnection
+class java.net.URL
+class java.sql.SQLException
+class java.util.ArrayList
+class java.util.logging.Level
+class java.util.logging.Logger
+class javax.servlet.ServletException
+class javax.servlet.http.HttpServlet
+class javax.servlet.http.HttpServletRequest
+class javax.servlet.http.HttpServletResponse
+class javax.servlet.http.HttpSession
+class mainClasses.PetKeeper
+class mainClasses.PetOwner
+class servlets.AddKeeper
+class servlets.AddOwner
+class servlets.ChangeUserCredentials
+class servlets.ChatGPT
+class servlets.DeleteDB
+class servlets.GetKeeper
+class servlets.GetPetKeeper
+class servlets.InitDB
+class servlets.LoginSession
+class servlets.LogoutSession
+class servlets.NewServlet
+class servlets.PetCredentials
+class servlets.Session
+class servlets.addPet
+class servlets.booking
+class servlets.deleteUser
+class servlets.getAvailableKeepers
+class servlets.getBookingToKeeper
+class servlets.getPet
+class servlets.getUsers
+class servlets.respondToBooking
+servlets.AddKeeper ..> java.lang.Override
+servlets.AddKeeper ..> com.fasterxml.jackson.databind.JsonNode
+servlets.AddKeeper ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.AddKeeper ..> com.google.gson.JsonObject
+servlets.AddKeeper ..> database.tables.EditPetKeepersTable
+servlets.AddKeeper ..> java.io.IOException
+servlets.AddKeeper ..> java.sql.SQLException
+servlets.AddKeeper ..> javax.servlet.ServletException
+servlets.AddKeeper --|> javax.servlet.http.HttpServlet
+servlets.AddKeeper ..> javax.servlet.http.HttpServletRequest
+servlets.AddKeeper ..> javax.servlet.http.HttpServletResponse
+servlets.AddOwner ..> java.lang.Override
+servlets.AddOwner ..> com.fasterxml.jackson.databind.JsonNode
+servlets.AddOwner ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.AddOwner ..> com.google.gson.JsonObject
+servlets.AddOwner ..> database.tables.EditPetOwnersTable
+servlets.AddOwner ..> java.io.IOException
+servlets.AddOwner ..> java.sql.SQLException
+servlets.AddOwner ..> javax.servlet.ServletException
+servlets.AddOwner --|> javax.servlet.http.HttpServlet
+servlets.AddOwner ..> javax.servlet.http.HttpServletRequest
+servlets.AddOwner ..> javax.servlet.http.HttpServletResponse
+servlets.ChangeUserCredentials ..> java.lang.Override
+servlets.ChangeUserCredentials ..> com.fasterxml.jackson.databind.JsonNode
+servlets.ChangeUserCredentials ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.ChangeUserCredentials ..> com.google.gson.JsonObject
+servlets.ChangeUserCredentials ..> database.tables.EditPetKeepersTable
+servlets.ChangeUserCredentials ..> database.tables.EditPetOwnersTable
+servlets.ChangeUserCredentials ..> java.io.IOException
+servlets.ChangeUserCredentials ..> javax.servlet.ServletException
+servlets.ChangeUserCredentials --|> javax.servlet.http.HttpServlet
+servlets.ChangeUserCredentials ..> javax.servlet.http.HttpServletRequest
+servlets.ChangeUserCredentials ..> javax.servlet.http.HttpServletResponse
+servlets.ChatGPT ..> java.lang.Override
+servlets.ChatGPT ..> javax.servlet.annotation.WebServlet
+servlets.ChatGPT ..> com.google.gson.JsonObject
+servlets.ChatGPT ..> com.google.gson.JsonParser
+servlets.ChatGPT ..> java.net.HttpURLConnection
+servlets.ChatGPT ..> java.net.URL
+servlets.ChatGPT ..> javax.servlet.ServletException
+servlets.ChatGPT --|> javax.servlet.http.HttpServlet
+servlets.ChatGPT ..> javax.servlet.http.HttpServletRequest
+servlets.ChatGPT ..> javax.servlet.http.HttpServletResponse
+servlets.DeleteDB ..> java.lang.Override
+servlets.DeleteDB ..> database.init.InitDatabase
+servlets.DeleteDB ..> java.io.IOException
+servlets.DeleteDB ..> java.io.PrintWriter
+servlets.DeleteDB ..> java.sql.SQLException
+servlets.DeleteDB ..> java.util.logging.Level
+servlets.DeleteDB ..> java.util.logging.Logger
+servlets.DeleteDB ..> javax.servlet.ServletException
+servlets.DeleteDB --|> javax.servlet.http.HttpServlet
+servlets.DeleteDB ..> javax.servlet.http.HttpServletRequest
+servlets.DeleteDB ..> javax.servlet.http.HttpServletResponse
+servlets.GetKeeper ..> java.lang.Override
+servlets.GetKeeper ..> database.tables.EditPetKeepersTable
+servlets.GetKeeper ..> java.io.IOException
+servlets.GetKeeper ..> java.io.PrintWriter
+servlets.GetKeeper ..> java.sql.SQLException
+servlets.GetKeeper ..> java.util.logging.Level
+servlets.GetKeeper ..> java.util.logging.Logger
+servlets.GetKeeper ..> javax.servlet.ServletException
+servlets.GetKeeper --|> javax.servlet.http.HttpServlet
+servlets.GetKeeper ..> javax.servlet.http.HttpServletRequest
+servlets.GetKeeper ..> javax.servlet.http.HttpServletResponse
+servlets.GetKeeper ..> mainClasses.PetKeeper
+servlets.GetPetKeeper ..> java.lang.Override
+servlets.GetPetKeeper ..> database.tables.EditPetKeepersTable
+servlets.GetPetKeeper ..> java.io.IOException
+servlets.GetPetKeeper ..> java.io.PrintWriter
+servlets.GetPetKeeper ..> java.sql.SQLException
+servlets.GetPetKeeper ..> java.util.logging.Level
+servlets.GetPetKeeper ..> java.util.logging.Logger
+servlets.GetPetKeeper ..> javax.servlet.ServletException
+servlets.GetPetKeeper --|> javax.servlet.http.HttpServlet
+servlets.GetPetKeeper ..> javax.servlet.http.HttpServletRequest
+servlets.GetPetKeeper ..> javax.servlet.http.HttpServletResponse
+servlets.GetPetKeeper ..> mainClasses.PetKeeper
+servlets.InitDB ..> java.lang.Override
+servlets.InitDB ..> database.init.InitDatabase
+servlets.InitDB ..> java.io.IOException
+servlets.InitDB ..> java.io.PrintWriter
+servlets.InitDB ..> java.sql.SQLException
+servlets.InitDB ..> java.util.logging.Level
+servlets.InitDB ..> java.util.logging.Logger
+servlets.InitDB ..> javax.servlet.ServletException
+servlets.InitDB --|> javax.servlet.http.HttpServlet
+servlets.InitDB ..> javax.servlet.http.HttpServletRequest
+servlets.InitDB ..> javax.servlet.http.HttpServletResponse
+servlets.LoginSession ..> java.lang.Override
+servlets.LoginSession ..> com.fasterxml.jackson.databind.JsonNode
+servlets.LoginSession ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.LoginSession ..> database.tables.EditPetKeepersTable
+servlets.LoginSession ..> database.tables.EditPetOwnersTable
+servlets.LoginSession ..> java.io.IOException
+servlets.LoginSession ..> javax.servlet.ServletException
+servlets.LoginSession --|> javax.servlet.http.HttpServlet
+servlets.LoginSession ..> javax.servlet.http.HttpServletRequest
+servlets.LoginSession ..> javax.servlet.http.HttpServletResponse
+servlets.LoginSession ..> javax.servlet.http.HttpSession
+servlets.LogoutSession ..> java.lang.Override
+servlets.LogoutSession ..> com.google.gson.JsonObject
+servlets.LogoutSession ..> java.io.IOException
+servlets.LogoutSession ..> javax.servlet.ServletException
+servlets.LogoutSession --|> javax.servlet.http.HttpServlet
+servlets.LogoutSession ..> javax.servlet.http.HttpServletRequest
+servlets.LogoutSession ..> javax.servlet.http.HttpServletResponse
+servlets.LogoutSession ..> javax.servlet.http.HttpSession
+servlets.NewServlet ..> java.lang.Override
+servlets.NewServlet ..> java.io.IOException
+servlets.NewServlet ..> java.io.PrintWriter
+servlets.NewServlet ..> javax.servlet.ServletException
+servlets.NewServlet --|> javax.servlet.http.HttpServlet
+servlets.NewServlet ..> javax.servlet.http.HttpServletRequest
+servlets.NewServlet ..> javax.servlet.http.HttpServletResponse
+servlets.PetCredentials ..> java.lang.Override
+servlets.PetCredentials ..> com.fasterxml.jackson.databind.JsonNode
+servlets.PetCredentials ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.PetCredentials ..> com.google.gson.JsonObject
+servlets.PetCredentials ..> database.tables.EditPetsTable
+servlets.PetCredentials ..> java.io.IOException
+servlets.PetCredentials ..> javax.servlet.ServletException
+servlets.PetCredentials --|> javax.servlet.http.HttpServlet
+servlets.PetCredentials ..> javax.servlet.http.HttpServletRequest
+servlets.PetCredentials ..> javax.servlet.http.HttpServletResponse
+servlets.Session ..> java.lang.Override
+servlets.Session ..> com.google.gson.JsonObject
+servlets.Session ..> database.tables.EditMessagesTable
+servlets.Session ..> database.tables.EditPetKeepersTable
+servlets.Session ..> database.tables.EditPetOwnersTable
+servlets.Session ..> java.io.IOException
+servlets.Session ..> java.util.ArrayList
+servlets.Session ..> javax.servlet.ServletException
+servlets.Session --|> javax.servlet.http.HttpServlet
+servlets.Session ..> javax.servlet.http.HttpServletRequest
+servlets.Session ..> javax.servlet.http.HttpServletResponse
+servlets.Session ..> javax.servlet.http.HttpSession
+servlets.Session ..> mainClasses.PetKeeper
+servlets.Session ..> mainClasses.PetOwner
+servlets.addPet ..> java.lang.Override
+servlets.addPet ..> com.google.gson.JsonObject
+servlets.addPet ..> database.tables.EditPetsTable
+servlets.addPet ..> java.io.IOException
+servlets.addPet ..> javax.servlet.ServletException
+servlets.addPet --|> javax.servlet.http.HttpServlet
+servlets.addPet ..> javax.servlet.http.HttpServletRequest
+servlets.addPet ..> javax.servlet.http.HttpServletResponse
+servlets.booking ..> java.lang.Override
+servlets.booking ..> javax.servlet.annotation.WebServlet
+servlets.booking ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.booking ..> com.google.gson.JsonObject
+servlets.booking ..> database.tables.EditBookingsTable
+servlets.booking ..> java.io.IOException
+servlets.booking ..> javax.servlet.ServletException
+servlets.booking --|> javax.servlet.http.HttpServlet
+servlets.booking ..> javax.servlet.http.HttpServletRequest
+servlets.booking ..> javax.servlet.http.HttpServletResponse
+servlets.deleteUser ..> java.lang.Override
+servlets.deleteUser ..> javax.servlet.annotation.WebServlet
+servlets.deleteUser ..> com.fasterxml.jackson.databind.JsonNode
+servlets.deleteUser ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.deleteUser ..> com.google.gson.JsonObject
+servlets.deleteUser ..> database.tables.EditPetKeepersTable
+servlets.deleteUser ..> database.tables.EditPetOwnersTable
+servlets.deleteUser ..> java.io.IOException
+servlets.deleteUser ..> javax.servlet.ServletException
+servlets.deleteUser --|> javax.servlet.http.HttpServlet
+servlets.deleteUser ..> javax.servlet.http.HttpServletRequest
+servlets.deleteUser ..> javax.servlet.http.HttpServletResponse
+servlets.getAvailableKeepers ..> java.lang.Override
+servlets.getAvailableKeepers ..> javax.servlet.annotation.WebServlet
+servlets.getAvailableKeepers ..> com.fasterxml.jackson.databind.JsonNode
+servlets.getAvailableKeepers ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.getAvailableKeepers ..> com.google.gson.JsonObject
+servlets.getAvailableKeepers ..> database.tables.EditBookingsTable
+servlets.getAvailableKeepers ..> database.tables.EditPetKeepersTable
+servlets.getAvailableKeepers ..> database.tables.EditPetOwnersTable
+servlets.getAvailableKeepers ..> java.io.IOException
+servlets.getAvailableKeepers ..> java.util.ArrayList
+servlets.getAvailableKeepers ..> javax.servlet.ServletException
+servlets.getAvailableKeepers --|> javax.servlet.http.HttpServlet
+servlets.getAvailableKeepers ..> javax.servlet.http.HttpServletRequest
+servlets.getAvailableKeepers ..> javax.servlet.http.HttpServletResponse
+servlets.getAvailableKeepers ..> mainClasses.PetKeeper
+servlets.getBookingToKeeper ..> java.lang.Override
+servlets.getBookingToKeeper ..> javax.servlet.annotation.WebServlet
+servlets.getBookingToKeeper ..> com.fasterxml.jackson.databind.JsonNode
+servlets.getBookingToKeeper ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.getBookingToKeeper ..> com.google.gson.JsonObject
+servlets.getBookingToKeeper ..> database.tables.EditBookingsTable
+servlets.getBookingToKeeper ..> java.io.IOException
+servlets.getBookingToKeeper ..> javax.servlet.ServletException
+servlets.getBookingToKeeper --|> javax.servlet.http.HttpServlet
+servlets.getBookingToKeeper ..> javax.servlet.http.HttpServletRequest
+servlets.getBookingToKeeper ..> javax.servlet.http.HttpServletResponse
+servlets.getPet ..> java.lang.Override
+servlets.getPet ..> javax.servlet.annotation.WebServlet
+servlets.getPet ..> com.fasterxml.jackson.databind.JsonNode
+servlets.getPet ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.getPet ..> com.google.gson.JsonObject
+servlets.getPet ..> database.tables.EditPetsTable
+servlets.getPet ..> java.io.IOException
+servlets.getPet ..> javax.servlet.ServletException
+servlets.getPet --|> javax.servlet.http.HttpServlet
+servlets.getPet ..> javax.servlet.http.HttpServletRequest
+servlets.getPet ..> javax.servlet.http.HttpServletResponse
+servlets.getUsers ..> java.lang.Override
+servlets.getUsers ..> javax.servlet.annotation.WebServlet
+servlets.getUsers ..> com.google.gson.JsonObject
+servlets.getUsers ..> database.tables.EditPetKeepersTable
+servlets.getUsers ..> java.io.IOException
+servlets.getUsers ..> java.util.ArrayList
+servlets.getUsers ..> javax.servlet.ServletException
+servlets.getUsers --|> javax.servlet.http.HttpServlet
+servlets.getUsers ..> javax.servlet.http.HttpServletRequest
+servlets.getUsers ..> javax.servlet.http.HttpServletResponse
+servlets.getUsers ..> mainClasses.PetKeeper
+servlets.respondToBooking ..> java.lang.Override
+servlets.respondToBooking ..> javax.servlet.annotation.WebServlet
+servlets.respondToBooking ..> com.fasterxml.jackson.databind.JsonNode
+servlets.respondToBooking ..> com.fasterxml.jackson.databind.ObjectMapper
+servlets.respondToBooking ..> com.google.gson.JsonObject
+servlets.respondToBooking ..> database.tables.EditBookingsTable
+servlets.respondToBooking ..> java.io.IOException
+servlets.respondToBooking ..> javax.servlet.ServletException
+servlets.respondToBooking --|> javax.servlet.http.HttpServlet
+servlets.respondToBooking ..> javax.servlet.http.HttpServletRequest
+servlets.respondToBooking ..> javax.servlet.http.HttpServletResponse
+@enduml

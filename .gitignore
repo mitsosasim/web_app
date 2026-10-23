@@ -1,0 +1,10 @@
+/target/
+/.idea/
+*.iml
+.env
+*.log
+/node_modules/
+/docs/portfolio-report/*.aux
+/docs/portfolio-report/*.log
+/docs/portfolio-report/*.out
+/docs/portfolio-report/main.pdf

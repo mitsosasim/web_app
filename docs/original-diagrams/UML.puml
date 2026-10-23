@@ -1,0 +1,88 @@
+@startuml
+class com.google.gson.Gson
+class database.DB_Connection
+class database.init.Resources
+class database.tables.EditBookingsTable
+class database.tables.EditMessagesTable
+class database.tables.EditPetKeepersTable
+class database.tables.EditPetOwnersTable
+class database.tables.EditPetsTable
+class database.tables.EditReviewsTable
+class java.lang.reflect.Field
+class java.sql.Connection
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.sql.Statement
+class java.util.ArrayList
+class java.util.logging.Level
+class java.util.logging.Logger
+class mainClasses.Booking
+class mainClasses.Message
+class mainClasses.Pet
+class mainClasses.PetKeeper
+class mainClasses.PetOwner
+class mainClasses.Review
+database.tables.EditBookingsTable ..> com.google.gson.Gson
+database.tables.EditBookingsTable ..> database.DB_Connection
+database.tables.EditBookingsTable ..> java.sql.Connection
+database.tables.EditBookingsTable ..> java.sql.ResultSet
+database.tables.EditBookingsTable ..> java.sql.SQLException
+database.tables.EditBookingsTable ..> java.sql.Statement
+database.tables.EditBookingsTable ..> java.util.ArrayList
+database.tables.EditBookingsTable ..> java.util.logging.Level
+database.tables.EditBookingsTable ..> java.util.logging.Logger
+database.tables.EditBookingsTable ..> mainClasses.Booking
+database.tables.EditBookingsTable ..> mainClasses.PetKeeper
+database.tables.EditMessagesTable ..> com.google.gson.Gson
+database.tables.EditMessagesTable ..> database.DB_Connection
+database.tables.EditMessagesTable ..> java.sql.Connection
+database.tables.EditMessagesTable ..> java.sql.ResultSet
+database.tables.EditMessagesTable ..> java.sql.SQLException
+database.tables.EditMessagesTable ..> java.sql.Statement
+database.tables.EditMessagesTable ..> java.util.ArrayList
+database.tables.EditMessagesTable ..> java.util.logging.Level
+database.tables.EditMessagesTable ..> java.util.logging.Logger
+database.tables.EditMessagesTable ..> mainClasses.Message
+database.tables.EditPetKeepersTable ..> com.google.gson.Gson
+database.tables.EditPetKeepersTable ..> database.DB_Connection
+database.tables.EditPetKeepersTable ..> database.init.Resources
+database.tables.EditPetKeepersTable ..> java.lang.reflect.Field
+database.tables.EditPetKeepersTable ..> java.sql.Connection
+database.tables.EditPetKeepersTable ..> java.sql.ResultSet
+database.tables.EditPetKeepersTable ..> java.sql.SQLException
+database.tables.EditPetKeepersTable ..> java.sql.Statement
+database.tables.EditPetKeepersTable ..> java.util.ArrayList
+database.tables.EditPetKeepersTable ..> java.util.logging.Level
+database.tables.EditPetKeepersTable ..> java.util.logging.Logger
+database.tables.EditPetKeepersTable ..> mainClasses.PetKeeper
+database.tables.EditPetOwnersTable ..> com.google.gson.Gson
+database.tables.EditPetOwnersTable ..> database.DB_Connection
+database.tables.EditPetOwnersTable ..> java.sql.Connection
+database.tables.EditPetOwnersTable ..> java.sql.ResultSet
+database.tables.EditPetOwnersTable ..> java.sql.SQLException
+database.tables.EditPetOwnersTable ..> java.sql.Statement
+database.tables.EditPetOwnersTable ..> java.util.ArrayList
+database.tables.EditPetOwnersTable ..> java.util.logging.Level
+database.tables.EditPetOwnersTable ..> java.util.logging.Logger
+database.tables.EditPetOwnersTable ..> mainClasses.PetOwner
+database.tables.EditPetsTable ..> com.google.gson.Gson
+database.tables.EditPetsTable ..> database.DB_Connection
+database.tables.EditPetsTable ..> java.sql.Connection
+database.tables.EditPetsTable ..> java.sql.ResultSet
+database.tables.EditPetsTable ..> java.sql.SQLException
+database.tables.EditPetsTable ..> java.sql.Statement
+database.tables.EditPetsTable ..> java.util.ArrayList
+database.tables.EditPetsTable ..> java.util.logging.Level
+database.tables.EditPetsTable ..> java.util.logging.Logger
+database.tables.EditPetsTable ..> mainClasses.Pet
+database.tables.EditReviewsTable ..> com.google.gson.Gson
+database.tables.EditReviewsTable ..> database.DB_Connection
+database.tables.EditReviewsTable ..> java.sql.Connection
+database.tables.EditReviewsTable ..> java.sql.ResultSet
+database.tables.EditReviewsTable ..> java.sql.SQLException
+database.tables.EditReviewsTable ..> java.sql.Statement
+database.tables.EditReviewsTable ..> java.util.ArrayList
+database.tables.EditReviewsTable ..> java.util.logging.Level
+database.tables.EditReviewsTable ..> java.util.logging.Logger
+database.tables.EditReviewsTable ..> mainClasses.Review
+@enduml
