@@ -57,4 +57,4 @@ This is a course prototype. Availability currently depends on booking status rat
 - [LaTeX sources](docs/portfolio-report/main.tex) · [Overleaf ZIP](docs/portfolio-report-overleaf.zip).
 - [Earlier course report](docs/earlier-course-report.pdf): documentation from the earlier implementation.
 
-Individual coursework by **Dimitrios Asimakopoulos**.
+Individual coursework by **Dimitrios Asimakopoulos** (in 2023 without LLM's hence the shitty UI :)).
